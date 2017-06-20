@@ -23,6 +23,7 @@ class Pokemon extends Component {
       <div className="pokemon">
         <img src="http://i.imgur.com/58JIZPC.png" alt="pokeball" className="poke-logo"/>
         <form onSubmit={this.handleSubmit.bind(this)}>
+          <p>| WARNING: Any entree from generation 8 will note function |</p>
           <div>
             <input 
               type="text"
