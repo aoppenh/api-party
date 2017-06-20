@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css';
+import GitHub from './GitHub'
 
 class App extends Component {
   render() {
@@ -15,18 +16,18 @@ class App extends Component {
             <li>
               <NavLink to='/github'>GitHub API</NavLink>
             </li>
-            <li>
+            {/*<li>
               <NavLink to='/nasa'>NASA API</NavLink>
             </li>
             <li>
               <NavLink to='/homework'>Homework</NavLink>
-            </li>
+            </li>*/}
           </ul>
         </div>
         <Switch>
-          <Route path='/github' render={() => <h1>GitHub</h1>} />
-          <Route path='/nasa' render={() => <h1>NASA</h1>} />
-          <Route path='/homework' render={() => <h1>HOMEWORK</h1>} />
+          <Route path='/github' component={GitHub} />
+          {/*<Route path='/nasa' render={() => <h1>NASA</h1>} />
+          <Route path='/homework' render={() => <h1>HOMEWORK</h1>} />*/}
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
