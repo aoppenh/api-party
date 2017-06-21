@@ -91,6 +91,7 @@ class Monster extends Component {
                     {/*<h3>{mon.generation.name}</h3>*/}
                     <p><a href={`https://bulbapedia.bulbagarden.net/wiki/${mon.name}_(Pokemon)`} target="_">Link to {mon.name}'s Bulbapedia Page</a></p>
                     <p><a href={`https://pokemondb.net/pokedex/${mon.name}`} target="_">Link to {mon.name}'s PokemonDB Page</a></p>
+                    <p><a href={`http://pokeapi.co/api/v1/pokemon/${mon.national_id}`} target="_">pokeapi v1</a></p>
                 </div>
             </div>
         )
