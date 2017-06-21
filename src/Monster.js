@@ -79,9 +79,8 @@ class Monster extends Component {
         // const habitat = (mon.habitat === null) ? 'none' : mon.habitat.name
         const total = (mon.total === 0) ? (mon.hp + mon.attack + mon.defense + mon.sp_atk + mon.sp_def + mon.speed) : mon.total
         const species = (mon.species === '') ? 'unavailable' : mon.species
-        var types = this.joinTypes(mon).toString()
-        var typesDisplay = types.replace('undefined', '')
-        console.log(types)
+        const types = this.joinTypes(mon).toString()
+        const typesDisplay = types.replace('undefined', '')
         const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.national_id}.png`
         return (
             <div className="monster">
@@ -106,7 +105,7 @@ class Monster extends Component {
                     {/*<h3>{mon.generation.name}</h3>*/}
                     <p><a href={`https://bulbapedia.bulbagarden.net/wiki/${mon.name}_(Pokemon)`} target="_">Link to {mon.name}'s Bulbapedia Page</a></p>
                     <p><a href={`https://pokemondb.net/pokedex/${mon.name}`} target="_">Link to {mon.name}'s PokemonDB Page</a></p>
-                    <p><a href={`http://pokeapi.co/api/v1/pokemon/${mon.national_id}`} target="_">pokeapi v1</a></p>
+                    <p><a href={`https://pokeapi.co/api/v1/pokemon/${mon.national_id}`} target="_">pokeapi v1</a></p>
                 </div>
             </div>
         )

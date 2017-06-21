@@ -21,7 +21,7 @@ class Pokemon extends Component {
   render() {
     return (
       <div className="pokemon">
-        <img src="http://i.imgur.com/58JIZPC.png" alt="pokeball" className="poke-logo"/>
+        <img src="https://i.imgur.com/58JIZPC.png" alt="pokeball" className="poke-logo"/>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <p>| WARNING: Any entree from generation 7, (Sun & Moon) work |</p>
           <div>
