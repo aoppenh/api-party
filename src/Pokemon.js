@@ -35,7 +35,7 @@ class Pokemon extends Component {
             <button type="submit">Look up Pokemon</button>
           </div>
         </form>
-        <Route exact path='/pokemon' render={() => <h3>Please enter the name of a Pokemon</h3>} />
+        <Route exact path='/pokemon' render={() => <h3>Please enter the name of a Pokemon or it's National Pokedex Id</h3>} />
         <Route path='/pokemon/:username' component={Monster} />
       </div>
     )
