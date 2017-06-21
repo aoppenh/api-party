@@ -43,13 +43,13 @@ class Monster extends Component {
     }
 
     fetchmonData(props) {
-        fetch(`http://pokeapi.co/api/v1/pokemon/${props.match.params.username}`)
+        fetch(`https://pokeapi.co/api/v1/pokemon/${props.match.params.username}`)
             .then(response => response.json())
             .then(mon => this.setState({ mon }))
     }
 
     fetchspriteData(props) {
-        fetch(`http://pokeapi.co/api/v1/sprite/${this.state.mon.natioanl_id}`)
+        fetch(`https://pokeapi.co/api/v1/sprite/${this.state.mon.natioanl_id}`)
             .then(response => response.json())
             .then(sprites => this.setState({ sprites }))
     }
