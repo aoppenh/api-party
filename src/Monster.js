@@ -20,6 +20,7 @@ class Monster extends Component {
             // habitat: '',
             national_id: '',
             // generation: '',
+            types: [''],
         },
         sprites: {
             created: '',
@@ -31,7 +32,7 @@ class Monster extends Component {
                 name: '',
                 resource_uri: ''
             },
-            resource_uri: ''
+            resource_uri: '',
         },
     }
 
@@ -60,8 +61,17 @@ class Monster extends Component {
         }
     }
 
-    joinTypes = () => {
-
+    joinTypes = (mon) => {
+        const len = mon.types.length
+        let types
+        for (let i = 0; i < len; i++) {
+            if (i !== len - 1) {
+                types += mon.types[i].name + ', '
+            } else {
+                types += mon.types[i].name
+            }
+        }
+        return types
     }
 
     render() {
@@ -69,6 +79,9 @@ class Monster extends Component {
         // const habitat = (mon.habitat === null) ? 'none' : mon.habitat.name
         const total = (mon.total === 0) ? (mon.hp + mon.attack + mon.defense + mon.sp_atk + mon.sp_def + mon.speed) : mon.total
         const species = (mon.species === '') ? 'unavailable' : mon.species
+        var types = this.joinTypes(mon).toString()
+        var typesDisplay = types.replace('undefined', '')
+        console.log(types)
         const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.national_id}.png`
         return (
             <div className="monster">
@@ -79,6 +92,8 @@ class Monster extends Component {
                     <h2>{mon.name}</h2>
                     <h3>species: {species}</h3>
                     <h3>national pokedex #: {mon.national_id}</h3>
+                    <h2>types</h2>
+                    <h3>{typesDisplay}</h3>
                     <h2>stats</h2>
                     <h3>hp: {mon.hp}</h3>
                     <h3>attack: {mon.attack}</h3>
