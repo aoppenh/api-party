@@ -89,7 +89,8 @@ class Monster extends Component {
                     <h3>stat total: {total}</h3>
                     {/*<h3>habitat: {habitat}</h3>*/}
                     {/*<h3>{mon.generation.name}</h3>*/}
-                    <a href={`https://bulbapedia.bulbagarden.net/wiki/${mon.name}_(Pokemon)`} target="_">Link to {mon.name}'s Bulbapedia Page</a>
+                    <p><a href={`https://bulbapedia.bulbagarden.net/wiki/${mon.name}_(Pokemon)`} target="_">Link to {mon.name}'s Bulbapedia Page</a></p>
+                    <p><a href={`https://pokemondb.net/pokedex/${mon.name}`} target="_">Link to {mon.name}'s PokemonDB Page</a></p>
                 </div>
             </div>
         )
