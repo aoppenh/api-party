@@ -16,6 +16,7 @@ class Pokemon extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.history.push(`/pokemon/${this.state.mon}`)
+    this.setState({ mon: '' })
   }
 
   render() {
