@@ -24,7 +24,7 @@ class Pokemon extends Component {
       <div className="pokemon">
         <img src="https://i.imgur.com/58JIZPC.png" alt="pokeball" className="poke-logo"/>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <p>| WARNING: Any entree from generation 7, (Sun & Moon) work |</p>
+          <p>| WARNING: Any entree from generation 7, (Sun & Moon) does not work |</p>
           <div>
             <input 
               type="text"
